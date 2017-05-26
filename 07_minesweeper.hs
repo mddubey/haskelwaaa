@@ -61,9 +61,7 @@ start grid = do
     
   if not (check (grid !! x !! y) input) 
     then print $ "Game Over"
-    else do 
-      let grid = apply grid x y input
-      start grid
+    else start (apply grid x y input)
 
 
 main = start grid
